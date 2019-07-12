@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ruleset name="jed">
+	<description>Jed checking.</description>
+
+    <arg name="report" value="full"/>
+    <arg name="tab-width" value="4"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg value="sp"/>
+    <arg name="colors" />
+
+	<!-- Exclude folders not containing production code -->
+	 <exclude-pattern type="relative">build/*</exclude-pattern>
+	 <exclude-pattern type="relative">tests/*</exclude-pattern>
+
+	 <!-- Exclude 3rd party libraries. -->
+	 <exclude-pattern type="relative">libraries/*</exclude-pattern>
+	 <exclude-pattern type="relative">vendor/*</exclude-pattern>
+	 
+	<rule ref="Joomla">
+		<!-- These exceptions are permanent as long as there are B/C naming exceptions  -->
+		<exclude name="Joomla.NamingConventions"/>
+		<exclude name="Joomla.Commenting"/>
+		<exclude name="Joomla.ControlStructures"/>
+		<exclude name="Joomla.Functions"/>
+		<exclude name="PEAR.Commenting"/>					
+		<exclude name="Generic"/>
+		<exclude name="Squiz"/>
+	</rule>
+</ruleset>
