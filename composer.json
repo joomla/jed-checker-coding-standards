@@ -1,0 +1,27 @@
+{
+    "name": "joomla/jed-checker-coding-standards",
+    "type": "phpcodesniffer-standard",
+    "description": "Jed checker Coding Standards",
+    "keywords": ["joomla", "coding standards", "phpcs", "php codesniffer", "jed checker"],
+    "homepage": "https://github.com/joomla/jed-checker-coding-standards",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Jed checker Coding Standards Contributors",
+            "homepage": "https://github.com/joomla/coding-standards/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.10",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "master": "1.x"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths ../../.."
+    }
+}
